@@ -66,21 +66,33 @@
      var map = new google.maps.Map(document.getElementById('map-canvas'),
          mapOptions);
        
-     var fishLatlng = new google.maps.LatLng(37.868335, -122.497795);  
-     var fishContact = "<div class='infoWindow'><p><b>Fish</b><br>350 Harbor Dr<br>Sausalito, CA 94965<br>"+
-                       "<a href='http://www.331fish.com'>331fish.com</a></p></div>";
-
-     var infowindow = new google.maps.InfoWindow({
-         content: fishContact });
-     var fishMarker = new google.maps.Marker({
-                    position: fishLatlng,
+ var info = [{lat: 37.868335, lng: -122.497795, 
+                  content: "<div class='infoWindow'><p><b>FISH (Restaurant)</b><br>350 Harbor Dr<br>Sausalito, CA 94965<br>"+
+                           "<a href='http://www.331fish.com'>331fish.com</a></p></div>",
+                  title: 'Fish (415) 331-3474'},
+              {lat: 37.871761, lng: -122.271941, 
+                  content: "<div class='infoWindow'><p><b>Bonita Fish Market</b><br>1941 University Ave<br>Berkeley, CA 94704<br>"+
+                           "<a href='http://www.yelp.com/biz/bonita-fish-market-berkeley'>Yelp.com</a></p></div>",
+                  title: 'Bonita Fish Market (510) 529-4372'}
+          
+        
+        ];
+                          
+     for (var i=0; i<info.length; i++)
+     {
+        var latlng = new google.maps.LatLng(info[i].lat, info[i].lng);
+        var infowindow = new google.maps.InfoWindow({content: info[i].content });
+        var marker = new google.maps.Marker({
+                    position: latlng,
                     map: map,
-                    title: 'Fish (415) 331-3474'
+                    title: info[i].title});
+        google.maps.event.addListener(marker, 'click', function() 
+        {
+             infowindow.open(map,marker);
         });
-     google.maps.event.addListener(fishMarker, 'click', function() {
-         infowindow.open(map,fishMarker);
-     });
+     } 
    }
+ 
    google.maps.event.addDomListener(window, 'load', initialize);
  </script>
 </head>
