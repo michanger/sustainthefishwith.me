@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>The Future of Sustainable Fish</title>
+<title>Fish and Oysters</title>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0;">
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
 	document.addEventListener('DOMContentLoaded', function () {
 		var menuCapture = document.getElementById("nav").innerHTML;
 		document.getElementById("navmobile").innerHTML = document.getElementById("nav").innerHTML;
 	});
 </script>
 
+<style type="text/css">
+  html, body, #map-canvas { height: 100%; width: 100%; margin: 0; padding: 0;}
+</style>
 
 <link rel="stylesheet" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" type="text/css" /><link rel='stylesheet' type='text/css' href='http://cdn1.editmysite.com/editor/libraries/fancybox/fancybox.css?1234' />
-<link rel='stylesheet' type='text/css' href='files/main_style.css?1414057508' title='wsite-theme-css' />
+<link rel='stylesheet' type='text/css' href='files/main_style.css?1414085425' title='wsite-theme-css' />
 <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 <link href='http://fonts.googleapis.com/css?family=Actor&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 <link href='http://cdn1.editmysite.com/editor/fonts/Aller/font.css?2' rel='stylesheet' type='text/css' />
@@ -52,60 +55,59 @@
 
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
 <script src='http://cdn2.editmysite.com/js/site/main.js?buildTime=1234'></script>
-<script>_W.relinquish && _W.relinquish()</script>
+<script>_W.relinquish && _W.relinquish();</script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<script type="text/javascript">
+   function initialize() {
+     var mapOptions = {
+       center: { lat: 37.7749295, lng: -122.4194155},
+       zoom: 8
+     };
+     var map = new google.maps.Map(document.getElementById('map-canvas'),
+         mapOptions);
+       
+     var fishLatlng = new google.maps.LatLng(37.868335, -122.497795);  
+     var fishContact = "<div class='infoWindow'><p><b>Fish</b><br>350 Harbor Dr<br>Sausalito, CA 94965<br>"+
+                       "<a href='http://www.331fish.com'>331fish.com</a></p></div>";
 
+     var infowindow = new google.maps.InfoWindow({
+         content: fishContact });
+     var fishMarker = new google.maps.Marker({
+                    position: fishLatlng,
+                    map: map,
+                    title: 'Fish (415) 331-3474'
+        });
+     google.maps.event.addListener(fishMarker, 'click', function() {
+         infowindow.open(map,fishMarker);
+     });
+   }
+   google.maps.event.addDomListener(window, 'load', initialize);
+ </script>
 </head>
-<body class='no-header-page wsite-page-index wsite-theme-light'>
+
+<body class='no-header-page wsite-page-the-product wsite-theme-light'>
 <div id="wrapper">
 
-	<div id="navigation">
-    <div id="navigation-wrap">
-      <div id="sitename"><span class='wsite-logo'><a href='index.html'><img src='uploads/4/1/4/1/41415865/FISH.png' /></a></span></div>
-  	 	<div id="nav"><ul class='wsite-menu-default'><li id='active'><a href='index.html'>Home Page</a></li>
-                        <li id='pg724748658100096345'><a href='the-product.html'>Fish and Oysters</a></li>
-                        <li id='pg970497183449860918'><a href='our-story.html'>Our Story</a></li>
-                        <li id='pg970497183449860918'><a href='Aquaincali.html'>Aquaculture in California</a></li>
-                        <li id='pg970497183449860918'><a href='Environmentimp.html'>Environmental Impacts</a></li>
-                        <li id='pg970497183449860918'><a href='Govinvolvement.html'>Government Involvement</a></li>
-                        <li id='pg970497183449860918'><a href='bizmap.html'>Sustainable Businesses</a></li>
-                        <li id='pg970497183449860918'><a href='Resources.html'>Resources</a></li>
-                        <li id='pg859408745101653107'><a href='contact.html'>Contact</a></li></ul></div>
-   	 	<div id="navmobile"></div>
+    <div id="navigation">
+        <div id="navigation-wrap">
+            <div id="sitename"><span class='wsite-logo'><a href='index.html'><img src='uploads/4/1/4/1/41415865/1186819.png' /></a></span></div>
+            <div id="nav"><ul class='wsite-menu-default'>
+                    <li id='pg257619430223534561'><a href='index.html'>Recharge Ventures</a></li>
+                    <li id='active'><a href='the-product.html'>The Product</a></li>
+                    <li id='pg970497183449860918'><a href='our-story.html'>Our Story</a></li>
+                    <li id='pg859408745101653107'><a href='contact.html'>Contact</a></li></ul></div>
+            <div id="navmobile"></div>
+        </div>
+        <div id="mobile-close"></div>
     </div>
-    <div id="mobile-close"></div>
-	</div>
-
-
-  <div id="main">
-
-    <div id="mobile-top">
-      <div id="mobile-open"></div>
-      <div id="sitename"><span class='wsite-logo'><a href='index.html'><img src='uploads/4/1/4/1/41415865/FISH.png' /></a></span></div>      
-    </div>
-
-  	<div id="content-wrapper">
-  		<div id="content"><div id='wsite-content' class='wsite-elements wsite-not-footer'>
-<div><div class="wsite-image wsite-image-border-thin " style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
-<a>
-<img src="uploads/4/1/4/1/41415865/fish opening image.jpg" alt="Picture" style="width:auto;max-width:100%" />
-</a>
-<div style="display:block;font-size:90%"></div>
-</div></div>
-
-
-<h2 class="wsite-content-title" style="text-align:center;">-- ABOUT US --</h2>
-
-<div class="paragraph" style="text-align:justify;"><span style=""><span style="">The World's fish stock is declining. Seafood consumption is on the rise- and for good reasons, Fish is high in healthy fats like omega 3 and low in cholesterol. The result is one of the healthiest protein sources known for man. Another touted advantage of fish, namely the low energy required to bring a pound of meat to the dinner table hides a problem. Fish is the last major animal that we hunt in the wild. Chickens have been domesticated. Cattle have been domesticated. Together with humans they are amung the most populous animal species on the planet. All sorts of fish species, on the other hand, are not doing as well. As humanity's appetite for fish increase, we must develop alternative ways to produce fish- currently the concept of sustainable fish relies on low production, preserving fish stocks but keeping prices high. We are interested in a future where fish are plentiful, cheap, and a viable healthy alternative in our everyday diet.</span><br /></span></div>
-
-</div>
-</div>
-  	</div>
     
-  	<div id="footer"><a target="_top" href="http://www.weebly.com/"></a><a target="_top" href="http://www.weebly.com/" title="free web site">.</a></div>
-
+  <div id="main" style="width:100%; height: 100%">
+     <h1>Sustainable Restaurants In Bay Area</h1>
+     <div id="map-canvas"></div>
   </div>
 
 </div>
+    
 <script type="text/javascript" src="files/theme/custom.js"></script>
 <script type="text/javascript" src="files/theme/mobile.js"></script>
 
