@@ -78,19 +78,21 @@
         
         ];
                           
-     for (var i=0; i<info.length; i++)
+for (var i=0; i<info.length; i++)
      {
         var latlng = new google.maps.LatLng(info[i].lat, info[i].lng);
         var infowindow = new google.maps.InfoWindow({content: info[i].content });
         var marker = new google.maps.Marker({
                     position: latlng,
                     map: map,
-                    title: info[i].title});
+                    title: info[i].title,
+                    infowindow: infowindow});
         google.maps.event.addListener(marker, 'click', function() 
         {
-             infowindow.open(map,marker);
+             this.infowindow.open(map,this);
         });
      } 
+ 
    }
  
    google.maps.event.addDomListener(window, 'load', initialize);
@@ -107,7 +109,7 @@
                             <li id='pg970497183449860918'><a href='index.html'>Home Page</a></li>
                             <li id='pg970497183449860918'><a href='our-story.html'>Our Story</a></li>
                             <li id='pg970497183449860918'><a href='producers.html'>Producers</a></li>
-                            <li id='pg724748658100096345'><a href='distributers.html'>Distributers</a></li>
+                            <li id='pg724748658100096345'><a href='distributers.html'>The Supply Chain</a></li>
                             <li id='pg724748658100096345'><a href='interviews.html'>Interviews</a></li>
                             <li id='pg970497183449860918'><a href='Env Imp.html'>Env. Impacts</a></li>
                             <li id='pg970497183449860918'><a href='Government.html'>Government</a></li>
